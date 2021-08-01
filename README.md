@@ -6,7 +6,7 @@ This portfolio is a compilation of notebooks which I created for data analysis u
 
 ### House Prices: Advanced Regression Techniques
 
-[Github](https://github.com/AlaiY95/Alai.Github.io/blob/main/Notebooks/Titanic.ipynb) [nbviewer](http://nbviewer.jupyter.org/github.com/AlaiY95/Alai.Github.io/blob/main/Notebooks/Titanic.ipynb)
+[Github](https://github.com/AlaiY95/Alai.Github.io/blob/main/Notebooks/House_Prices.ipynb) [nbviewer](http://nbviewer.jupyter.org/github.com/AlaiY95/Alai.Github.io/blob/main/Notebooks/House_Prices.ipynb)
 
 House Prices: Advanced Regression Techniques is a knowledge competition on Kaggle. This is a regression problem: based on information about houses we predict their prices. General description and data are available on [Kaggle](https://www.kaggle.com/c/house-prices-advanced-regression-techniques).
 The dataset has a lot of features and many missing values. This gives interesting possibilities for feature transformation and data visualization.
