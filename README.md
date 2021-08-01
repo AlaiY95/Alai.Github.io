@@ -1,6 +1,15 @@
 # Data Science portflio by Alai Yosief
 
-This portfolio is a compilation of notebooks which I created for data analysis or for exploration of machine learning algorithms. A separate category is for separate projects.
+This portfolio is a compilation of notebooks which I created for data analysis using a variety of statistical methods. A separate category is for separate projects. Kaggle was used as the soure of the data sets and ideas.
+
+## Regression problems.
+
+### House Prices: Advanced Regression Techniques
+
+[Github](https://github.com/AlaiY95/Alai.Github.io/blob/main/Notebooks/Titanic.ipynb) [nbviewer](http://nbviewer.jupyter.org/github.com/AlaiY95/Alai.Github.io/blob/main/Notebooks/Titanic.ipynb)
+
+House Prices: Advanced Regression Techniques is a knowledge competition on Kaggle. This is a regression problem: based on information about houses we predict their prices. General description and data are available on [Kaggle](https://www.kaggle.com/c/house-prices-advanced-regression-techniques).
+The dataset has a lot of features and many missing values. This gives interesting possibilities for feature transformation and data visualization.
 
 ## Classification problems.
 
