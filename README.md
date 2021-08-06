@@ -1,6 +1,6 @@
-# Data Science portflio by Alai Yosief
+# Portflio by Alai Yosief
 
-This portfolio is a compilation of notebooks which I created for data analysis using a variety of statistical methods. A separate category is for separate projects. Kaggle was used as the soure of the data sets and ideas.
+This portfolio is a compilation of notebooks which I created for data analysis using a variety of statistical methods using the Python programming language. A separate category is for separate projects. Kaggle was used as the soure of the data sets and ideas.
 
 ## Regression problems.
 
