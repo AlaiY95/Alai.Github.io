@@ -4,6 +4,12 @@ This portfolio is a compilation of notebooks which I created for data analysis u
 
 ## Regression problems.
 
+### Loan Prediction
+
+[Github](https://github.com/AlaiY95/Alai.Github.io/blob/main/Notebooks/Loan_Prediction.ipynb) [nbviewer](http://nbviewer.jupyter.org/github.com/AlaiY95/Alai.Github.io/blob/main/Notebooks/Loan_Prediction.ipynb)
+
+Loan Prediction is a knowledge and learning hackathon on Analyticsvidhya. Dream Housing Finance company deals in home loans. Company wants to automate the loan eligibility process (real time) based on customer detail provided while filling online application form. Based on customer's information we predict whether they should receive a loan or not. General description and data are available on [Analyticsvidhya](https://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/).
+
 ### House Prices: Advanced Regression Techniques
 
 [Github](https://github.com/AlaiY95/Alai.Github.io/blob/main/Notebooks/House_Prices.ipynb) [nbviewer](http://nbviewer.jupyter.org/github.com/AlaiY95/Alai.Github.io/blob/main/Notebooks/House_Prices.ipynb)
