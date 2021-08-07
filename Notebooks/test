@@ -1,0 +1,42 @@
+import pandas as pd
+import numpy as np
+import math
+from math import sin, cos, sqrt, atan2, radians
+
+df = pd.read_csv('FlightDistanceTest.csv')
+
+def get_distance(in_lat1, in_lon1, in_lat2, in_lon2):
+    # approximate radius of earth in km
+    R = 6373.0
+
+    lat1 = radians(in_lat1)
+    lon1 = radians(in_lon1)
+    lat2 = radians(in_lat2)
+    lon2 = radians(in_lon2)
+
+    dlon = lon2 - lon1
+    dlat = lat2 - lat1
+
+    a = sin(dlat / 2)**2 + cos(lat1) * cos(lat2) * sin(dlon / 2)**2
+    c = 2 * atan2(sqrt(a), sqrt(1 - a))
+
+    distance = R * c
+
+    return distance
+
+df['Distance'] = df.apply(lambda x: get_distance(x['Departure_lat'], x['Departure_lon'], x['Arrival_lat'], x['Arrival_lon']), axis=1)
+
+#Read CSV from ourairports.com and searchthe IATA code column for any na values
+df_airports = pd.read_csv('https://ourairports.com/data/airports.csv')
+df_airports = df_airports[['name', 'iata_code']].copy()
+df_airports = df_airports[df_airports['iata_code'].notna()].reset_index(drop=True)
+# df_airports.query('iata_code == "CDG" | iata_code == "LHR"')
+
+df[['ap_dep', 'ap_arr']] = df['Normalised City Pair'].str.split(' - ', expand=True)
+
+df_airports = df_airports.sort_values('name')
+
+df_airports = df_airports.drop_duplicates(subset ='iata_code', keep='first')
+
+df['dep_ap_name'] = df['Departure Code'].map(df_airports.set_index('iata_code')['name'])
+df['arr_ap_name'] = df['Arrival Code'].map(df_airports.set_index('iata_code')['name'])
