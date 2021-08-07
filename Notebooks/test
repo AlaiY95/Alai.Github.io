@@ -32,11 +32,15 @@ df_airports = df_airports[['name', 'iata_code']].copy()
 df_airports = df_airports[df_airports['iata_code'].notna()].reset_index(drop=True)
 # df_airports.query('iata_code == "CDG" | iata_code == "LHR"')
 
+#Add columns ap_dep and ap_airr by splitting the Normalised City Pair
 df[['ap_dep', 'ap_arr']] = df['Normalised City Pair'].str.split(' - ', expand=True)
 
+#Sort airports column by name ascending
 df_airports = df_airports.sort_values('name')
 
+#Drop duplicates from IATS code column
 df_airports = df_airports.drop_duplicates(subset ='iata_code', keep='first')
 
+#Add values to dep_ap and arr_ap column from df_airports
 df['dep_ap_name'] = df['Departure Code'].map(df_airports.set_index('iata_code')['name'])
 df['arr_ap_name'] = df['Arrival Code'].map(df_airports.set_index('iata_code')['name'])
